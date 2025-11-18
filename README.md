@@ -44,12 +44,34 @@ Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+module f1_logic(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum=a^b^c;
+assign carry=(a&b)|(b&c)|(c&a);
+endmodule
+
+
+module f2_logic(a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
+assign difference=(a^b^c);
+assign borrow=(~a&b)|(~(a^b)&c);
+endmodule
 
 **RTL Schematic**
+<img width="1920" height="1080" alt="f1" src="https://github.com/user-attachments/assets/6ee569d9-994f-478f-bcab-4b9a4bf8fb97" />
+
+
+<img width="1920" height="1080" alt="Screenshot (99)" src="https://github.com/user-attachments/assets/1877325f-4e21-4908-a574-c053f2d18bfa" />
+
 
 **Output Timing Waveform**
+
+<img width="1920" height="1080" alt="f1 (2)" src="https://github.com/user-attachments/assets/573613e1-7598-4bfd-9111-460db423b9e1" />
+
+<img width="1920" height="1080" alt="Screenshot (100)" src="https://github.com/user-attachments/assets/ff635df6-401a-4455-b11d-a47f64b4e1b6" />
+
 
 **Result:**
 
