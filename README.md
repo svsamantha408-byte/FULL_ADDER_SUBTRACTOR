@@ -37,10 +37,44 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+| a | b | c | sum | carry |
+| - | - | - | --- | ----- |
+| 0 | 0 | 0 | 0   | 0     |
+| 0 | 0 | 1 | 1   | 0     |
+| 0 | 1 | 0 | 1   | 0     |
+| 0 | 1 | 1 | 0   | 1     |
+| 1 | 0 | 0 | 1   | 0     |
+| 1 | 0 | 1 | 0   | 1     |
+| 1 | 1 | 0 | 0   | 1     |
+| 1 | 1 | 1 | 1   | 1     |
+
+| a | b | c | difference | borrow |
+| - | - | - | ---------- | ------ |
+| 0 | 0 | 0 | 0          | 0      |
+| 0 | 0 | 1 | 1          | 1      |
+| 0 | 1 | 0 | 1          | 1      |
+| 0 | 1 | 1 | 0          | 1      |
+| 1 | 0 | 0 | 1          | 0      |
+| 1 | 0 | 1 | 0          | 0      |
+| 1 | 1 | 0 | 0          | 0      |
+| 1 | 1 | 1 | 1          | 1      |
+
 
 **Procedure**
+Create a new project in Quartus Prime and add a Verilog file containing both modules (full adder and full subtractor).
 
-Write the detailed procedure here
+Save the file and run Start Compilation to check for errors.
+
+Create a University Program VWF for simulation.
+
+Insert the inputs (a, b, c) and outputs (sum, carry, difference, borrow) using Node Finder.
+
+Draw all input combinations (000 to 111) for testing both circuits.
+
+Assign waveform values to inputs and run Functional Simulation.
+
+Observe the outputs and verify that the results match the truth tables of the full adder and full subtractor.
+
 
 **Program:**
 
