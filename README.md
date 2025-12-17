@@ -61,6 +61,7 @@ Borrow out = A'Bin + A'B + BBin
 
 
 **Procedure**
+```
 Create a new project in Quartus Prime and add a Verilog file containing both modules (full adder and full subtractor).
 
 Save the file and run Start Compilation to check for errors.
@@ -74,25 +75,25 @@ Draw all input combinations (000 to 111) for testing both circuits.
 Assign waveform values to inputs and run Functional Simulation.
 
 Observe the outputs and verify that the results match the truth tables of the full adder and full subtractor.
-
+```
 
 **Program:**
-
+```
 module f1_logic(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
 assign sum=a^b^c;
 assign carry=(a&b)|(b&c)|(c&a);
 endmodule
-
-
+```
+```
 module f2_logic(a,b,c,difference,borrow);
 input a,b,c;
 output difference,borrow;
 assign difference=(a^b^c);
 assign borrow=(~a&b)|(~(a^b)&c);
 endmodule
-
+```
 **RTL Schematic**
 <img width="1920" height="1080" alt="f1" src="https://github.com/user-attachments/assets/6ee569d9-994f-478f-bcab-4b9a4bf8fb97" />
 
